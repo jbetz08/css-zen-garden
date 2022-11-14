@@ -1,1 +1,6 @@
-/* deleted all the starter css so I can view it raw */
+@import url("https://fonts.googleapis.com/css2?family=Recursive:CRSV@0&display=swap");
+body {
+  font-family: "Recursive";
+}
+
+/*# sourceMappingURL=style.css.map */
