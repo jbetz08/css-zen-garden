@@ -1,5 +1,184 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:CRSV@0&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
-body{
-    font-family: "Recursive";
+body {
+   font-family: 'Orbitron', sans-serif;
+}
+
+html {
+   color: white;
+   background-color: black;
+   background-image: radial-gradient(
+         white,
+         rgba(255, 255, 255, 0.2) 2px,
+         transparent 0px
+      ),
+      radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 0px),
+      radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 0px),
+      radial-gradient(
+         rgba(255, 255, 255, 0.4),
+         rgba(255, 255, 255, 0.1) 2px,
+         transparent 0px
+      );
+   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.page-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 25rem;
+}
+
+.sidebar {
+   grid-column: 2/3;
+   grid-row: 1/2;
+}
+
+.intro {
+   grid-column: 1/2;
+   grid-row: 1/2;
+}
+
+#zen-supporting {
+   grid-column: 1/2;
+   grid-row: 2/3;
+}
+
+$icon-size: 80px;
+$w: 365px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@mixin lightsaber($color) {
+   background: mix($color, #fff, 10%);
+   box-shadow: $color 0px 0px 0px 2px;
+   &:hover {
+      box-shadow: $color 0px 0px 20px 2px;
+      text-shadow: $color 0px 0px 6px, $color 0px 0px 10px;
+   }
+}
+
+
+nav,
+.zen-resources {
+   & {
+      transform: translatex(0%);
+   }
+   font-family: 'Orbitron', sans-serif;
+   color: white;
+   transform: translatex(-100%);
+   transition: transform 0.2s ease;
+   top: $icon-size;
+   bottom: 0px;
+   padding-right: 16px;
+   width: $w;
+   ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li,
+      .view-css {
+         @include lightsaber(#0f0);
+         display: grid;
+         grid-template-columns: 12.5rem auto auto;
+         font-size: 0.85em;
+         line-height: 1.25em;
+         padding: 0px;
+         padding-left: 0px;
+         margin: 16px 0px;
+         width: 0;
+         border-radius: 0px 100px 100px 0px;
+         transition: width 0.2s ease, padding 0.2s ease, color 0.2s ease,
+            text-shadow 0.2s ease;
+         &:hover {
+            width: 100%;
+            padding: 0px 16px 0px 0px;
+            color: black;
+         }
+         a {
+            display: block;
+            text-decoration: none;
+            width: $w;
+            height: 1rem;
+            color: inherit;
+            padding-left: 16px;
+         }
+         &.view-css {
+            @include lightsaber(#f00);
+         }
+         &.css-resources {
+            @include lightsaber(#f00);
+         }
+         &.zen-faq {
+            @include lightsaber(#f00);
+         }
+         &.zen-submit {
+            @include lightsaber(#f00);
+         }
+         &.zen-translations {
+            @include lightsaber(#f00);
+         }
+      }
+   }
+}
+
+@keyframes green-ls-in {
+   0% {
+      transform: translate(-50%, -50%) rotate(180deg);
+   }
+   50% {
+      transform: translate(-50%, -50%) rotate(-90deg);
+   }
+   100% {
+      transform: translate(-50%, -50%) rotate(-90deg) translate(200%, 0%);
+   }
+}
+
+@keyframes green-ls-out {
+   0% {
+      transform: translate(-50%, -200%) rotate(-90deg);
+   }
+   50% {
+      transform: translate(-50%, -50%) rotate(-90deg);
+   }
+
+   100% {
+      transform: translate(-50%, -50%) rotate(180deg);
+   }
+}
+
+@keyframes fadein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+.intro,
+#zen-supporting {
+   position: relative;
+   transform-origin: 50% 100%;
+
+}
+
+.intro > header {
+   font-size: 90%;
+   text-align: center;
+}
+
+.intro > header h1 {
+   margin: 0 0 100px;
+   text-transform: uppercase;
+}
+
+@keyframes crawl {
+   0% {
+      top: 0;
+      transform: rotateX(20deg) translateZ(0);
+   }
+   100% {
+      top: -6000px;
+      transform: rotateX(25deg) translateZ(-2500px);
+   }
 }
