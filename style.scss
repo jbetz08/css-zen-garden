@@ -182,3 +182,121 @@ nav,
       transform: rotateX(25deg) translateZ(-2500px);
    }
 }
+=======
+$green: #00A300;
+$blue: #00B7E0;
+$red: #B80000;
+$grey-light: #969696;
+$grey-dark: #67697C;
+
+@mixin lightsaber($color){
+  background:mix($color,#fff,10%);
+  box-shadow:$color 0px 0px 0px 2px;
+  &:hover {
+    box-shadow:$color 0px 0px 20px 2px;
+    text-shadow:$color 0px 0px 6px,$color 0px 0px 10px;
+  }
+}
+
+@keyframes green-ls-in {
+  0% { 
+    transform: translate(-50%,-50%) rotate(180deg); }
+  50% { 
+    transform: translate(-50%,-50%) rotate(-90deg); }
+  100% {
+    transform: translate(-50%,-50%) rotate(-90deg) translate(200%,0%);}
+}
+
+@keyframes green-ls-out {
+  0% {
+    transform: translate(-50%,-200%) rotate(-90deg);}
+  50% { 
+    transform: translate(-50%,-50%) rotate(-90deg); }
+
+  100% { 
+    transform: translate(-50%,-50%) rotate(180deg); }
+}
+
+@keyframes fadein {
+  from {
+    Opacity:0;
+  }
+  to {
+    Opacity:1;
+  }
+}
+
+#zen-supporting h3 {
+  @include lightsaber($blue);
+      font-size:1em;
+      line-height:16px;
+      padding:0px;
+      padding-left:0px;
+      margin:16px 0px;
+      width:0;
+      border-radius:0px 100px 100px 0px;
+      transition:width 0.2s ease,
+        padding 0.2s ease,
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+      &:hover {
+        width:25%;
+        padding:0px 16px 0px 0px;
+        color:black;
+      }
+      &#zen-participation h3 {
+        @include lightsaber($green);
+      }
+      &.red {
+        @include lightsaber($red);
+      }
+      &.purple {
+        @include lightsaber(#c0c);
+      }
+      &.yellow {
+        @include lightsaber(#FF0);
+      }
+}
+
+
+
+#css-zen-garden{
+  width: 960px;
+  margin: 0 auto;
+  background-color: $grey-dark;
+}
+
+.page-wrapper{
+  background-color: white;
+  padding: 15px;
+}
+
+header{
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a {
+  color: $green;
+}
+
+body{
+  font-family: 'Recursive', monospace;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wrapper h3{
+  text-align: center;
+}
