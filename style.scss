@@ -206,3 +206,9 @@ nav,
       transform: rotateX(25deg) translateZ(-2500px);
    }
 }
+@media only screen and (max-width: 1000px) {
+   .sidebar {
+       grid-column: 1/3;
+       grid-row: 4/5;
+     }
+ }
