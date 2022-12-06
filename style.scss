@@ -8,6 +8,7 @@ $lightsaber-red: #f00;
 
 body {
    font-family: 'Orbitron', sans-serif;
+   font-size: 1.1rem;
 }
 
 html {
@@ -42,6 +43,7 @@ html {
 .intro {
    grid-column: 1/2;
    grid-row: 1/2;
+   padding: 50px;
 }
 
 .intro a {
@@ -51,6 +53,7 @@ html {
 #zen-supporting {
    grid-column: 1/2;
    grid-row: 2/3;
+   padding: 50px;
 }
 
 #zen-supporting a {
