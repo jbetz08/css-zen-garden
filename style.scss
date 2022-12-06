@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:CRSV@0&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
+$lightsaber-blue: #4df;
+$lightsaber-green: #0f0;
+$lightsaber-red: #f00;
+
+
 body {
    font-family: 'Orbitron', sans-serif;
 }
@@ -39,9 +44,25 @@ html {
    grid-row: 1/2;
 }
 
+.intro a {
+   color: $lightsaber-green;
+}
+
 #zen-supporting {
    grid-column: 1/2;
    grid-row: 2/3;
+}
+
+#zen-supporting a {
+   color: $lightsaber-green;
+}
+
+h1 {
+   font-size: 2.5rem;
+}
+
+h2, h3 {
+   color: $lightsaber-blue;
 }
 
 $icon-size: 80px;
@@ -77,7 +98,7 @@ nav,
       margin: 0;
       li,
       .view-css {
-         @include lightsaber(#0f0);
+         @include lightsaber($lightsaber-green);
          display: grid;
          grid-template-columns: 12.5rem auto auto;
          font-size: 0.85em;
@@ -103,19 +124,19 @@ nav,
             padding-left: 16px;
          }
          &.view-css {
-            @include lightsaber(#f00);
+            @include lightsaber($lightsaber-red);
          }
          &.css-resources {
-            @include lightsaber(#f00);
+            @include lightsaber($lightsaber-red);
          }
          &.zen-faq {
-            @include lightsaber(#f00);
+            @include lightsaber($lightsaber-red);
          }
          &.zen-submit {
-            @include lightsaber(#f00);
+            @include lightsaber($lightsaber-red);
          }
          &.zen-translations {
-            @include lightsaber(#f00);
+            @include lightsaber($lightsaber-red);
          }
       }
    }
