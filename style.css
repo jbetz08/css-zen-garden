@@ -2,246 +2,194 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body {
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.1rem;
-}
+  font-family: 'Orbitron', sans-serif;
+  background-image: url(""); }
 
 html {
   color: white;
   background-color: black;
   background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 0px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 0px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 0px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 0px);
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-}
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px; }
 
 .page-wrapper {
   display: grid;
-  grid-template-columns: 1fr 25rem;
-}
+  grid-template-columns: 60rem 20rem; }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   grid-column: 2/3;
   grid-row: 1/2;
-}
+  padding: 50px;
+  margin-right: 0; }
 
 .intro {
   grid-column: 1/2;
   grid-row: 1/2;
-  padding: 50px;
-}
-
-.intro a {
-  color: #0f0;
-}
+  padding: 50px; }
 
 #zen-supporting {
   grid-column: 1/2;
   grid-row: 2/3;
-  padding: 50px;
-}
-
-#zen-supporting a {
-  color: #0f0;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2, h3 {
-  color: #4df;
-}
+  padding: 50px; }
 
 nav,
 .zen-resources {
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   color: white;
   transform: translatex(-100%);
   transition: transform 0.2s ease;
   top: 80px;
   bottom: 0px;
   padding-right: 16px;
-  width: 365px;
-}
-nav,
-.zen-resources {
-  transform: translatex(0%);
-}
-nav ul,
-.zen-resources ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-nav ul li,
-nav ul .view-css,
-.zen-resources ul li,
-.zen-resources ul .view-css {
-  background: #e6ffe6;
-  box-shadow: #0f0 0px 0px 0px 2px;
-  display: grid;
-  grid-template-columns: 12.5rem auto auto;
-  font-size: 0.85em;
-  line-height: 1.25em;
-  padding: 0px;
-  padding-left: 0px;
-  margin: 16px 0px;
-  width: 0;
-  border-radius: 0px 100px 100px 0px;
-  transition: width 0.2s ease, padding 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
-}
-nav ul li:hover,
-nav ul .view-css:hover,
-.zen-resources ul li:hover,
-.zen-resources ul .view-css:hover {
-  box-shadow: #0f0 0px 0px 20px 2px;
-  text-shadow: #0f0 0px 0px 6px, #0f0 0px 0px 10px;
-}
-nav ul li:hover,
-nav ul .view-css:hover,
-.zen-resources ul li:hover,
-.zen-resources ul .view-css:hover {
-  width: 100%;
-  padding: 0px 16px 0px 0px;
-  color: black;
-}
-nav ul li a,
-nav ul .view-css a,
-.zen-resources ul li a,
-.zen-resources ul .view-css a {
-  display: block;
-  text-decoration: none;
-  width: 365px;
-  height: 1rem;
-  color: inherit;
-  padding-left: 16px;
-}
-nav ul li.view-css,
-nav ul .view-css.view-css,
-.zen-resources ul li.view-css,
-.zen-resources ul .view-css.view-css {
-  background: #ffe6e6;
-  box-shadow: #f00 0px 0px 0px 2px;
-}
-nav ul li.view-css:hover,
-nav ul .view-css.view-css:hover,
-.zen-resources ul li.view-css:hover,
-.zen-resources ul .view-css.view-css:hover {
-  box-shadow: #f00 0px 0px 20px 2px;
-  text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px;
-}
-nav ul li.css-resources,
-nav ul .view-css.css-resources,
-.zen-resources ul li.css-resources,
-.zen-resources ul .view-css.css-resources {
-  background: #ffe6e6;
-  box-shadow: #f00 0px 0px 0px 2px;
-}
-nav ul li.css-resources:hover,
-nav ul .view-css.css-resources:hover,
-.zen-resources ul li.css-resources:hover,
-.zen-resources ul .view-css.css-resources:hover {
-  box-shadow: #f00 0px 0px 20px 2px;
-  text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px;
-}
-nav ul li.zen-faq,
-nav ul .view-css.zen-faq,
-.zen-resources ul li.zen-faq,
-.zen-resources ul .view-css.zen-faq {
-  background: #ffe6e6;
-  box-shadow: #f00 0px 0px 0px 2px;
-}
-nav ul li.zen-faq:hover,
-nav ul .view-css.zen-faq:hover,
-.zen-resources ul li.zen-faq:hover,
-.zen-resources ul .view-css.zen-faq:hover {
-  box-shadow: #f00 0px 0px 20px 2px;
-  text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px;
-}
-nav ul li.zen-submit,
-nav ul .view-css.zen-submit,
-.zen-resources ul li.zen-submit,
-.zen-resources ul .view-css.zen-submit {
-  background: #ffe6e6;
-  box-shadow: #f00 0px 0px 0px 2px;
-}
-nav ul li.zen-submit:hover,
-nav ul .view-css.zen-submit:hover,
-.zen-resources ul li.zen-submit:hover,
-.zen-resources ul .view-css.zen-submit:hover {
-  box-shadow: #f00 0px 0px 20px 2px;
-  text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px;
-}
-nav ul li.zen-translations,
-nav ul .view-css.zen-translations,
-.zen-resources ul li.zen-translations,
-.zen-resources ul .view-css.zen-translations {
-  background: #ffe6e6;
-  box-shadow: #f00 0px 0px 0px 2px;
-}
-nav ul li.zen-translations:hover,
-nav ul .view-css.zen-translations:hover,
-.zen-resources ul li.zen-translations:hover,
-.zen-resources ul .view-css.zen-translations:hover {
-  box-shadow: #f00 0px 0px 20px 2px;
-  text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px;
-}
+  width: 365px; }
+  nav,
+  .zen-resources {
+    transform: translatex(0%); }
+  nav ul,
+  .zen-resources ul {
+    width: 500px;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    nav ul li,
+    nav ul .view-css,
+    .zen-resources ul li,
+    .zen-resources ul .view-css {
+      background: #e6ffe6;
+      box-shadow: #0f0 0px 0px 0px 2px;
+      display: grid;
+      grid-template-columns: 12.5rem 3rem 12.5rem;
+      font-size: 0.85em;
+      line-height: 1.25em;
+      padding: 0px;
+      padding-left: 0px;
+      margin: 16px 0px;
+      width: 0;
+      border-radius: 0px 100px 100px 0px;
+      transition: width 0.2s ease, padding 0.2s ease, color 0.2s ease, text-shadow 0.2s ease; }
+      nav ul li:hover,
+      nav ul .view-css:hover,
+      .zen-resources ul li:hover,
+      .zen-resources ul .view-css:hover {
+        box-shadow: #0f0 0px 0px 20px 2px;
+        text-shadow: #0f0 0px 0px 6px, #0f0 0px 0px 10px; }
+      nav ul li:hover,
+      nav ul .view-css:hover,
+      .zen-resources ul li:hover,
+      .zen-resources ul .view-css:hover {
+        width: 75%;
+        padding: 0px 16px 0px 0px;
+        color: black; }
+      nav ul li a,
+      nav ul .view-css a,
+      .zen-resources ul li a,
+      .zen-resources ul .view-css a {
+        display: block;
+        text-decoration: none;
+        height: 1rem;
+        color: inherit;
+        padding-left: 16px; }
+      nav ul li.view-css,
+      nav ul .view-css.view-css,
+      .zen-resources ul li.view-css,
+      .zen-resources ul .view-css.view-css {
+        background: #ffe6e6;
+        box-shadow: #f00 0px 0px 0px 2px; }
+        nav ul li.view-css:hover,
+        nav ul .view-css.view-css:hover,
+        .zen-resources ul li.view-css:hover,
+        .zen-resources ul .view-css.view-css:hover {
+          box-shadow: #f00 0px 0px 20px 2px;
+          text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px; }
+      nav ul li.css-resources,
+      nav ul .view-css.css-resources,
+      .zen-resources ul li.css-resources,
+      .zen-resources ul .view-css.css-resources {
+        background: #ffe6e6;
+        box-shadow: #f00 0px 0px 0px 2px; }
+        nav ul li.css-resources:hover,
+        nav ul .view-css.css-resources:hover,
+        .zen-resources ul li.css-resources:hover,
+        .zen-resources ul .view-css.css-resources:hover {
+          box-shadow: #f00 0px 0px 20px 2px;
+          text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px; }
+      nav ul li.zen-faq,
+      nav ul .view-css.zen-faq,
+      .zen-resources ul li.zen-faq,
+      .zen-resources ul .view-css.zen-faq {
+        background: #ffe6e6;
+        box-shadow: #f00 0px 0px 0px 2px; }
+        nav ul li.zen-faq:hover,
+        nav ul .view-css.zen-faq:hover,
+        .zen-resources ul li.zen-faq:hover,
+        .zen-resources ul .view-css.zen-faq:hover {
+          box-shadow: #f00 0px 0px 20px 2px;
+          text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px; }
+      nav ul li.zen-submit,
+      nav ul .view-css.zen-submit,
+      .zen-resources ul li.zen-submit,
+      .zen-resources ul .view-css.zen-submit {
+        background: #ffe6e6;
+        box-shadow: #f00 0px 0px 0px 2px; }
+        nav ul li.zen-submit:hover,
+        nav ul .view-css.zen-submit:hover,
+        .zen-resources ul li.zen-submit:hover,
+        .zen-resources ul .view-css.zen-submit:hover {
+          box-shadow: #f00 0px 0px 20px 2px;
+          text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px; }
+      nav ul li.zen-translations,
+      nav ul .view-css.zen-translations,
+      .zen-resources ul li.zen-translations,
+      .zen-resources ul .view-css.zen-translations {
+        background: #ffe6e6;
+        box-shadow: #f00 0px 0px 0px 2px; }
+        nav ul li.zen-translations:hover,
+        nav ul .view-css.zen-translations:hover,
+        .zen-resources ul li.zen-translations:hover,
+        .zen-resources ul .view-css.zen-translations:hover {
+          box-shadow: #f00 0px 0px 20px 2px;
+          text-shadow: #f00 0px 0px 6px, #f00 0px 0px 10px; }
 
 @keyframes green-ls-in {
   0% {
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
+    transform: translate(-50%, -50%) rotate(180deg); }
   50% {
-    transform: translate(-50%, -50%) rotate(-90deg);
-  }
+    transform: translate(-50%, -50%) rotate(-90deg); }
   100% {
-    transform: translate(-50%, -50%) rotate(-90deg) translate(200%, 0%);
-  }
-}
+    transform: translate(-50%, -50%) rotate(-90deg) translate(200%, 0%); } }
 @keyframes green-ls-out {
   0% {
-    transform: translate(-50%, -200%) rotate(-90deg);
-  }
+    transform: translate(-50%, -200%) rotate(-90deg); }
   50% {
-    transform: translate(-50%, -50%) rotate(-90deg);
-  }
+    transform: translate(-50%, -50%) rotate(-90deg); }
   100% {
-    transform: translate(-50%, -50%) rotate(180deg);
-  }
-}
+    transform: translate(-50%, -50%) rotate(180deg); } }
 @keyframes fadein {
   from {
-    opacity: 0;
-  }
+    opacity: 0; }
   to {
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 .intro,
 #zen-supporting {
   position: relative;
-  transform-origin: 50% 100%;
-}
+  transform-origin: 50% 100%; }
 
 .intro > header {
   font-size: 90%;
-  text-align: center;
-}
+  text-align: center; }
 
 .intro > header h1 {
   margin: 0 0 100px;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 @keyframes crawl {
   0% {
     top: 0;
-    transform: rotateX(20deg) translateZ(0);
-  }
+    transform: rotateX(20deg) translateZ(0); }
   100% {
     top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
-  }
-}
+    transform: rotateX(25deg) translateZ(-2500px); } }
 
 /*# sourceMappingURL=style.css.map */

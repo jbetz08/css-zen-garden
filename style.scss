@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:CRSV@0&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 
-$lightsaber-blue: #4df;
-$lightsaber-green: #0f0;
-$lightsaber-red: #f00;
-
-
 body {
    font-family: 'Orbitron', sans-serif;
-   font-size: 1.1rem;
+   background-image: url("");
 }
+
 
 html {
    color: white;
@@ -32,12 +28,16 @@ html {
 
 .page-wrapper {
    display: grid;
-   grid-template-columns: 1fr 25rem;
+   grid-template-columns: 60rem 20rem;
 }
 
 .sidebar {
+   display: flex;
+   flex-direction: column;
    grid-column: 2/3;
    grid-row: 1/2;
+   padding: 50px;
+   margin-right: 0;
 }
 
 .intro {
@@ -46,26 +46,10 @@ html {
    padding: 50px;
 }
 
-.intro a {
-   color: $lightsaber-green;
-}
-
 #zen-supporting {
    grid-column: 1/2;
    grid-row: 2/3;
    padding: 50px;
-}
-
-#zen-supporting a {
-   color: $lightsaber-green;
-}
-
-h1 {
-   font-size: 2.5rem;
-}
-
-h2, h3 {
-   color: $lightsaber-blue;
 }
 
 $icon-size: 80px;
@@ -96,14 +80,15 @@ nav,
    padding-right: 16px;
    width: $w;
    ul {
+      width: 500px;
       list-style: none;
       padding: 0;
       margin: 0;
       li,
       .view-css {
-         @include lightsaber($lightsaber-green);
+         @include lightsaber(#0f0);
          display: grid;
-         grid-template-columns: 12.5rem auto auto;
+         grid-template-columns: 12.5rem 3rem 12.5rem;
          font-size: 0.85em;
          line-height: 1.25em;
          padding: 0px;
@@ -114,32 +99,32 @@ nav,
          transition: width 0.2s ease, padding 0.2s ease, color 0.2s ease,
             text-shadow 0.2s ease;
          &:hover {
-            width: 100%;
+            width: 75%;
             padding: 0px 16px 0px 0px;
             color: black;
          }
          a {
             display: block;
             text-decoration: none;
-            width: $w;
+            // width: $w;
             height: 1rem;
             color: inherit;
             padding-left: 16px;
          }
          &.view-css {
-            @include lightsaber($lightsaber-red);
+            @include lightsaber(#f00);
          }
          &.css-resources {
-            @include lightsaber($lightsaber-red);
+            @include lightsaber(#f00);
          }
          &.zen-faq {
-            @include lightsaber($lightsaber-red);
+            @include lightsaber(#f00);
          }
          &.zen-submit {
-            @include lightsaber($lightsaber-red);
+            @include lightsaber(#f00);
          }
          &.zen-translations {
-            @include lightsaber($lightsaber-red);
+            @include lightsaber(#f00);
          }
       }
    }
