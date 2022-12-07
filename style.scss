@@ -4,6 +4,7 @@
 $lightsaber-blue: #4df;
 $lightsaber-green: #0f0;
 $lightsaber-red: #f00;
+$site-background: #67697C;
 
 
 body {
@@ -13,7 +14,7 @@ body {
 
 html {
    color: white;
-   background-color: black;
+   background-color: $site-background;
    background-image: radial-gradient(
          white,
          rgba(255, 255, 255, 0.2) 2px,
@@ -46,8 +47,9 @@ html {
    padding: 50px;
 }
 
-.intro a {
+.intro a, #zen-supporting a {
    color: $lightsaber-green;
+   font-weight: bold;
 }
 
 #zen-supporting {
@@ -56,9 +58,9 @@ html {
    padding: 50px;
 }
 
-#zen-supporting a {
-   color: $lightsaber-green;
-}
+// #zen-supporting a {
+//    color: $lightsaber-green;
+// }
 
 h1 {
    font-size: 2.5rem;
@@ -206,9 +208,22 @@ nav,
       transform: rotateX(25deg) translateZ(-2500px);
    }
 }
-@media only screen and (max-width: 1000px) {
-   .sidebar {
-       grid-column: 1/3;
-       grid-row: 4/5;
-     }
- }
+
+h1::before, h1::after{
+   content: "";
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+   background: url("millennium-falcon.png") 0 0 no-repeat;
+   padding: 0;
+}
+
+h3::before {
+   content: "";
+   display: inline-block;
+   width: 32px;
+   height: 32px;
+   background: url("death-star.png") 0 0 no-repeat;
+   padding-right: 20px;
+}
+
