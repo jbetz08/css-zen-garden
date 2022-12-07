@@ -14,17 +14,16 @@ html {
 
 .page-wrapper {
   display: grid;
-
-  grid-template-columns: 60rem 20rem; }
+  grid-template-columns: 60rem 20rem; 
   width: 100vw;
   height: 100vh;
   grid-template-columns: 2fr 1fr;
-
+}
 
 
 .sidebar {
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   grid-column: 2/3;
   grid-row: 1/2;
   position: fixed;
