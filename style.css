@@ -191,5 +191,9 @@ nav,
   100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px); } }
+.extra1 {
+  width: 100px;
+  background-image: url("./images/r2-d2-96.png");
+  background-color: blue; }
 
 /*# sourceMappingURL=style.css.map */
